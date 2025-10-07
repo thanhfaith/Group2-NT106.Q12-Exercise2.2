@@ -54,7 +54,7 @@
             this.lbl1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl1.Location = new System.Drawing.Point(29, 101);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(94, 26);
+            this.lbl1.Size = new System.Drawing.Size(62, 17);
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "Họ  tên :";
             this.lbl1.Click += new System.EventHandler(this.label1_Click);
@@ -64,7 +64,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Location = new System.Drawing.Point(29, 201);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(87, 26);
+            this.lbl3.Size = new System.Drawing.Size(55, 17);
             this.lbl3.TabIndex = 1;
             this.lbl3.Text = "E-mail :";
             // 
@@ -73,7 +73,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 26);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 2;
             // 
             // lab5
@@ -81,7 +81,7 @@
             this.lab5.AutoSize = true;
             this.lab5.Location = new System.Drawing.Point(29, 301);
             this.lab5.Name = "lab5";
-            this.lab5.Size = new System.Drawing.Size(113, 26);
+            this.lab5.Size = new System.Drawing.Size(74, 17);
             this.lab5.TabIndex = 3;
             this.lab5.Text = "Mật khẩu :";
             this.lab5.Click += new System.EventHandler(this.label4_Click);
@@ -91,7 +91,7 @@
             this.lab6.AutoSize = true;
             this.lab6.Location = new System.Drawing.Point(29, 351);
             this.lab6.Name = "lab6";
-            this.lab6.Size = new System.Drawing.Size(200, 26);
+            this.lab6.Size = new System.Drawing.Size(130, 17);
             this.lab6.TabIndex = 4;
             this.lab6.Text = "Nhập lại mật khẩu :";
             // 
@@ -113,7 +113,7 @@
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.Location = new System.Drawing.Point(29, 151);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(151, 26);
+            this.lbl2.Size = new System.Drawing.Size(99, 17);
             this.lbl2.TabIndex = 7;
             this.lbl2.Text = "Số điện thoại :";
             this.lbl2.Click += new System.EventHandler(this.label8_Click);
@@ -123,7 +123,7 @@
             this.lab4.AutoSize = true;
             this.lab4.Location = new System.Drawing.Point(23, 251);
             this.lab4.Name = "lab4";
-            this.lab4.Size = new System.Drawing.Size(127, 26);
+            this.lab4.Size = new System.Drawing.Size(83, 17);
             this.lab4.TabIndex = 8;
             this.lab4.Text = "Ngày sinh : ";
             this.lab4.Click += new System.EventHandler(this.label9_Click);
@@ -134,7 +134,7 @@
             this.textht.Location = new System.Drawing.Point(243, 101);
             this.textht.Margin = new System.Windows.Forms.Padding(2);
             this.textht.Name = "textht";
-            this.textht.Size = new System.Drawing.Size(344, 32);
+            this.textht.Size = new System.Drawing.Size(344, 23);
             this.textht.TabIndex = 9;
             this.textht.TextChanged += new System.EventHandler(this.textht_TextChanged);
             // 
@@ -144,7 +144,7 @@
             this.texte.Location = new System.Drawing.Point(243, 201);
             this.texte.Margin = new System.Windows.Forms.Padding(2);
             this.texte.Name = "texte";
-            this.texte.Size = new System.Drawing.Size(344, 32);
+            this.texte.Size = new System.Drawing.Size(344, 23);
             this.texte.TabIndex = 10;
             // 
             // textns
@@ -153,7 +153,7 @@
             this.textns.Location = new System.Drawing.Point(243, 251);
             this.textns.Margin = new System.Windows.Forms.Padding(2);
             this.textns.Name = "textns";
-            this.textns.Size = new System.Drawing.Size(344, 32);
+            this.textns.Size = new System.Drawing.Size(344, 23);
             this.textns.TabIndex = 12;
             // 
             // textmk
@@ -163,7 +163,7 @@
             this.textmk.Margin = new System.Windows.Forms.Padding(2);
             this.textmk.Name = "textmk";
             this.textmk.PasswordChar = '*';
-            this.textmk.Size = new System.Drawing.Size(344, 32);
+            this.textmk.Size = new System.Drawing.Size(344, 23);
             this.textmk.TabIndex = 13;
             this.textmk.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -173,7 +173,7 @@
             this.textsdt.Location = new System.Drawing.Point(243, 151);
             this.textsdt.Margin = new System.Windows.Forms.Padding(2);
             this.textsdt.Name = "textsdt";
-            this.textsdt.Size = new System.Drawing.Size(344, 32);
+            this.textsdt.Size = new System.Drawing.Size(344, 23);
             this.textsdt.TabIndex = 14;
             this.textsdt.TextChanged += new System.EventHandler(this.textsdt_TextChanged);
             // 
@@ -184,7 +184,7 @@
             this.textnlmk.Margin = new System.Windows.Forms.Padding(2);
             this.textnlmk.Name = "textnlmk";
             this.textnlmk.PasswordChar = '*';
-            this.textnlmk.Size = new System.Drawing.Size(344, 32);
+            this.textnlmk.Size = new System.Drawing.Size(344, 23);
             this.textnlmk.TabIndex = 15;
             // 
             // btndk
@@ -198,6 +198,7 @@
             this.btndk.TabIndex = 16;
             this.btndk.Text = "đăng ký";
             this.btndk.UseVisualStyleBackColor = false;
+            this.btndk.Click += new System.EventHandler(this.btndk_Click);
             // 
             // btndn
             // 
@@ -220,14 +221,14 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 470);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 26);
+            this.label7.Size = new System.Drawing.Size(105, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "đã có tài khoản";
             this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // formdangky
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(640, 519);

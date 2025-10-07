@@ -50,7 +50,7 @@ namespace signin_signup
             {
                 MessageBox.Show("Định dạng email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-                string MaHoa = hashedPassword(password);
+                //string MaHoa = hashedPassword(password);
                 string connectionString = "Server=localhost;Database=mydatabase;UserId=myuser;Password=mypassword;";
                 string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
                 using (SqlConnection connect = new SqlConnection(connectionString))
@@ -59,7 +59,8 @@ namespace signin_signup
                     connect.Open();
                     SqlCommand command = new SqlCommand(query, connect);
                     command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Password", MaHoa);
+                    //command.Parameters.AddWithValue("@Password", MaHoa);
+                    command.Parameters.AddWithValue("@Password", password);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -77,6 +78,11 @@ namespace signin_signup
                     }
                 }
             }
+        }
+
+        private void txte_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

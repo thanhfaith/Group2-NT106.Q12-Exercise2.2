@@ -84,5 +84,41 @@ namespace signin_signup
         {
 
         }
+
+        private void btndk_Click(object sender, EventArgs e)
+        {
+            string hoTen = textht.Text.Trim();
+            string sdt = textsdt.Text.Trim();
+            string email = texte.Text.Trim();
+            string ngaySinh = textns.Text.Trim();
+            string matKhau = textmk.Text;
+            string nhapLai = textnlmk.Text;
+
+            // 1. Kiểm tra dữ liệu trống
+            if (string.IsNullOrEmpty(hoTen) || string.IsNullOrEmpty(sdt)
+                || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(matKhau)
+                || string.IsNullOrEmpty(nhapLai))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. Kiểm tra mật khẩu trùng khớp
+            if (matKhau != nhapLai)
+            {
+                MessageBox.Show("Mật khẩu nhập lại không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 3. Kiểm tra định dạng email đơn giản
+            if (!email.Contains("@") || !email.Contains("."))
+            {
+                MessageBox.Show("Email không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // 4. (Tạm thời) hiển thị thông báo đăng ký thành công
+            MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

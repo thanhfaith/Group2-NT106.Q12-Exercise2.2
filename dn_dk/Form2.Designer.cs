@@ -68,14 +68,14 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(24552, 26561);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(49152, 26);
+            this.textBox1.Size = new System.Drawing.Size(49152, 23);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(24552, 26561);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49152, 26);
+            this.textBox2.Size = new System.Drawing.Size(49152, 23);
             this.textBox2.TabIndex = 11;
             // 
             // label2
@@ -84,7 +84,7 @@
             this.label2.Location = new System.Drawing.Point(24064, 26561);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
+            this.label2.Size = new System.Drawing.Size(55, 17);
             this.label2.TabIndex = 18;
             this.label2.Text = "E-mail :";
             // 
@@ -94,7 +94,7 @@
             this.label4.Location = new System.Drawing.Point(24064, 26561);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.Size = new System.Drawing.Size(74, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "Mật khẩu :";
             // 
@@ -115,7 +115,7 @@
             this.label1.Location = new System.Drawing.Point(24552, 26561);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 22;
             // 
             // label10
@@ -124,7 +124,7 @@
             this.label10.Location = new System.Drawing.Point(512, 26561);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 20);
+            this.label10.Size = new System.Drawing.Size(0, 17);
             this.label10.TabIndex = 23;
             // 
             // button2
@@ -146,7 +146,7 @@
             this.label7.Location = new System.Drawing.Point(24552, 26561);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 20);
+            this.label7.Size = new System.Drawing.Size(105, 17);
             this.label7.TabIndex = 25;
             this.label7.Text = "đã có tài khoản";
             // 
@@ -156,8 +156,9 @@
             this.txte.Location = new System.Drawing.Point(243, 101);
             this.txte.Margin = new System.Windows.Forms.Padding(2);
             this.txte.Name = "txte";
-            this.txte.Size = new System.Drawing.Size(344, 26);
+            this.txte.Size = new System.Drawing.Size(344, 23);
             this.txte.TabIndex = 29;
+            this.txte.TextChanged += new System.EventHandler(this.txte_TextChanged);
             // 
             // label5
             // 
@@ -165,7 +166,7 @@
             this.label5.Location = new System.Drawing.Point(15, 209);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 20);
+            this.label5.Size = new System.Drawing.Size(0, 17);
             this.label5.TabIndex = 28;
             // 
             // lble
@@ -174,7 +175,7 @@
             this.lble.Location = new System.Drawing.Point(29, 101);
             this.lble.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lble.Name = "lble";
-            this.lble.Size = new System.Drawing.Size(67, 20);
+            this.lble.Size = new System.Drawing.Size(55, 17);
             this.lble.TabIndex = 27;
             this.lble.Text = "E-mail :";
             // 
@@ -184,7 +185,8 @@
             this.txtmk.Location = new System.Drawing.Point(243, 139);
             this.txtmk.Margin = new System.Windows.Forms.Padding(2);
             this.txtmk.Name = "txtmk";
-            this.txtmk.Size = new System.Drawing.Size(344, 26);
+            this.txtmk.PasswordChar = '*';
+            this.txtmk.Size = new System.Drawing.Size(344, 23);
             this.txtmk.TabIndex = 32;
             // 
             // label9
@@ -192,7 +194,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(-43, 169);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 20);
+            this.label9.Size = new System.Drawing.Size(0, 17);
             this.label9.TabIndex = 31;
             // 
             // lblmk
@@ -200,7 +202,7 @@
             this.lblmk.AutoSize = true;
             this.lblmk.Location = new System.Drawing.Point(29, 151);
             this.lblmk.Name = "lblmk";
-            this.lblmk.Size = new System.Drawing.Size(87, 20);
+            this.lblmk.Size = new System.Drawing.Size(74, 17);
             this.lblmk.TabIndex = 33;
             this.lblmk.Text = "Mật khẩu :";
             // 
@@ -222,7 +224,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(18, 242);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(140, 20);
+            this.label13.Size = new System.Drawing.Size(120, 17);
             this.label13.TabIndex = 36;
             this.label13.Text = "chưa có tài khoản";
             // 
@@ -270,7 +272,7 @@
             // 
             // Formdangnhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(640, 291);
