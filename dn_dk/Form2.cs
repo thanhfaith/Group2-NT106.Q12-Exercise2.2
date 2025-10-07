@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -38,6 +39,7 @@ namespace signin_signup
 
         private void btndn_Click(object sender, EventArgs e)
         {
+
             string email = txte.Text;
             string password = txtmk.Text;
             if (email == "" || password == "")
@@ -53,14 +55,15 @@ namespace signin_signup
                 //string MaHoa = hashedPassword(password);
                 string connectionString = "Server=localhost;Database=mydatabase;UserId=myuser;Password=mypassword;";
                 string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
-                using (SqlConnection connect = new SqlConnection(connectionString))
+                try
                 {
+                    using (SqlConnection connect = new SqlConnection(connectionString))
+                    {
 
                     connect.Open();
                     SqlCommand command = new SqlCommand(query, connect);
                     command.Parameters.AddWithValue("@Email", email);
-                    //command.Parameters.AddWithValue("@Password", MaHoa);
-                    command.Parameters.AddWithValue("@Password", password);
+                    command.Parameters.AddWithValue("@Password", MaHoa);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -77,6 +80,7 @@ namespace signin_signup
                         }
                     }
                 }
+
             }
         }
 
