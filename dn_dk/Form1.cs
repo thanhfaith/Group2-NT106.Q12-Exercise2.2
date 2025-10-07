@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -62,7 +63,7 @@ namespace signin_signup
             this.Hide();
             Formdangnhap f2 = new Formdangnhap();
             f2.ShowDialog();
-       
+
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -119,6 +120,41 @@ namespace signin_signup
 
             // 4. (Tạm thời) hiển thị thông báo đăng ký thành công
             MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+
+                    string query = "INSERT INTO Users (HoTen, SoDienThoai, Email, NgaySinh, MatKhau) " +
+                                   "VALUES (@HoTen, @SDT, @Email, @NgaySinh, @MatKhau)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@HoTen", textht.Text);
+                    cmd.Parameters.AddWithValue("@SDT", textsdt.Text);
+                    cmd.Parameters.AddWithValue("@Email", texte.Text);
+                    cmd.Parameters.AddWithValue("@NgaySinh", textns.Text);
+                    cmd.Parameters.AddWithValue("@MatKhau", textmk.Text);
+
+                    int result = cmd.ExecuteNonQuery();
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Đăng ký thành công!");
+                        Formdangnhap f2 = new Formdangnhap();
+                        f2.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng ký thất bại!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
+            }
         }
     }
 }

@@ -52,35 +52,39 @@ namespace signin_signup
             {
                 MessageBox.Show("Định dạng email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-                //string MaHoa = hashedPassword(password);
-                string connectionString = "Server=localhost;Database=mydatabase;UserId=myuser;Password=mypassword;";
+                string MaHoa = hashedPassword(password);
                 string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
                 try
                 {
-                    using (SqlConnection connect = new SqlConnection(connectionString))
+                    using (SqlConnection conn = Database.GetConnection())
                     {
 
-                    connect.Open();
-                    SqlCommand command = new SqlCommand(query, connect);
-                    command.Parameters.AddWithValue("@Email", email);
-                    command.Parameters.AddWithValue("@Password", MaHoa);
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.HasRows)
+                        conn.Open();
+                        SqlCommand command = new SqlCommand(query, conn);
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Password", MaHoa);
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Hide();
-                            Formthongtin main = new Formthongtin();
-                            main.ShowDialog();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Email hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            if (reader.HasRows)
+                            {
+                                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                Formthongtin main = new Formthongtin();
+                                main.ShowDialog();
+                                this.Close();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
 
+                    MessageBox.Show("Lỗi " + ex.Message);
+                }
             }
         }
 
