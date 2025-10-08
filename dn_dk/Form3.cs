@@ -13,11 +13,43 @@ namespace signin_signup
 {
     public partial class Formthongtin : Form
     {
-        public Formthongtin()
+        private int _userId;
+
+        public Formthongtin(int userId)
         {
             InitializeComponent();
+            _userId = userId;
         }
+        private void LoadUserInfo()
+        {
+            using (SqlConnection conn = Database.GetConnection())
+            {
+                string query = "SELECT HoTen, SoDienThoai, Email, NgaySinh FROM Users WHERE UserId = @ID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@ID", _userId);
 
+                try
+                {
+                    conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lblht.Text = reader["HoTen"].ToString();
+                        labsdt.Text = reader["SoDienThoai"].ToString();
+                        lble.Text = reader["Email"].ToString();
+                        DateTime ns = Convert.ToDateTime(reader["NgaySinh"]);
+                        lblns.Text = ns.ToString("dd/MM/yyyy");
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi tải thông tin người dùng: " + ex.Message);
+                }
+            }
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +97,7 @@ namespace signin_signup
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+             LoadUserInfo();
         }
 
         private void label7_Click(object sender, EventArgs e)

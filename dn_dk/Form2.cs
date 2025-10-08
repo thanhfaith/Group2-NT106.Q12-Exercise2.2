@@ -39,52 +39,53 @@ namespace signin_signup
 
         private void btndn_Click(object sender, EventArgs e)
         {
-
             string email = txte.Text;
             string password = txtmk.Text;
+
             if (email == "" || password == "")
             {
                 MessageBox.Show("Hãy nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
             string dinhdang = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             if (!Regex.IsMatch(email, dinhdang))
             {
                 MessageBox.Show("Định dạng email không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-                string MaHoa = hashedPassword(password);
-                string query = "SELECT * FROM Users WHERE Email = @Email AND Password = @Password";
-                try
+            }
+            string query = "SELECT * FROM Users WHERE Email = @Email AND MatKhau = @Password";
+            try
+            {
+                using (SqlConnection conn = Database.GetConnection())
                 {
-                    using (SqlConnection conn = Database.GetConnection())
-                    {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Password", password);
 
-                        conn.Open();
-                        SqlCommand command = new SqlCommand(query, conn);
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Password", MaHoa);
-                        using (SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read()) 
                         {
-                            if (reader.HasRows)
-                            {
-                                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                this.Hide();
-                                Formthongtin main = new Formthongtin();
-                                main.ShowDialog();
-                                this.Close();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Email hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            int userId = reader.GetInt32(reader.GetOrdinal("UserId")); 
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            Formthongtin main = new Formthongtin(userId); 
+
+                            main.ShowDialog();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show("Lỗi " + ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
