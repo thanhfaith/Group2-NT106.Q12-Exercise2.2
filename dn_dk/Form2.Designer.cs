@@ -188,6 +188,7 @@
             this.txtmk.PasswordChar = '*';
             this.txtmk.Size = new System.Drawing.Size(344, 23);
             this.txtmk.TabIndex = 32;
+            this.txtmk.TextChanged += new System.EventHandler(this.txtmk_TextChanged);
             // 
             // label9
             // 
