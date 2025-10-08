@@ -175,9 +175,9 @@
             this.lble.Location = new System.Drawing.Point(29, 104);
             this.lble.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lble.Name = "lble";
-            this.lble.Size = new System.Drawing.Size(55, 17);
+            this.lble.Size = new System.Drawing.Size(47, 17);
             this.lble.TabIndex = 27;
-            this.lble.Text = "E-mail :";
+            this.lble.Text = "E-mail";
             // 
             // txtmk
             // 
@@ -202,9 +202,9 @@
             this.lblmk.AutoSize = true;
             this.lblmk.Location = new System.Drawing.Point(29, 142);
             this.lblmk.Name = "lblmk";
-            this.lblmk.Size = new System.Drawing.Size(74, 17);
+            this.lblmk.Size = new System.Drawing.Size(66, 17);
             this.lblmk.TabIndex = 33;
-            this.lblmk.Text = "Mật khẩu :";
+            this.lblmk.Text = "Mật khẩu";
             // 
             // btndn
             // 

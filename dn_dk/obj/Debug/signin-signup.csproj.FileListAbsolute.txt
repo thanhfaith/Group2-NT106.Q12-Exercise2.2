@@ -49,3 +49,16 @@ D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2
 D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.exe
 D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.pdb
 D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.pdb
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.exe.config
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.exe
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.pdb
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.AssemblyReference.cache
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.exe.config
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.formdangky.resources
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Formdangnhap.resources
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Formthongtin.resources
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Properties.Resources.resources
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.GenerateResource.cache
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.CoreCompileInputs.cache
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.exe
+D:\HK3\Lap_trinh_mang\Bai_tap\BT_Tuan3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.pdb

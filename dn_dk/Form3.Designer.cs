@@ -69,9 +69,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(29, 253);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 17);
+            this.label9.Size = new System.Drawing.Size(75, 17);
             this.label9.TabIndex = 23;
-            this.label9.Text = "Ngày sinh : ";
+            this.label9.Text = "Ngày sinh ";
             // 
             // label8
             // 
@@ -79,9 +79,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(29, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 17);
+            this.label8.Size = new System.Drawing.Size(91, 17);
             this.label8.TabIndex = 22;
-            this.label8.Text = "Số điện thoại :";
+            this.label8.Text = "Số điện thoại";
             // 
             // label1
             // 
@@ -96,9 +96,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(29, 203);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 20;
-            this.label2.Text = "E-mail :";
+            this.label2.Text = "E-mail";
             // 
             // label4
             // 
@@ -107,9 +107,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(29, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Họ  tên :";
+            this.label4.Text = "Họ  tên";
             // 
             // label5
             // 

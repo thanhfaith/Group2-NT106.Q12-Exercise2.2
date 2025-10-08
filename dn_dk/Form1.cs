@@ -121,22 +121,18 @@ namespace signin_signup
                 return;
             }
 
-            // 2. Kiểm tra mật khẩu trùng khớp
             if (matKhau != nhapLai)
             {
                 MessageBox.Show("Mật khẩu nhập lại không khớp!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // 3. Kiểm tra định dạng email đơn giản
             if (!email.Contains("@") || !email.Contains("."))
             {
                 MessageBox.Show("Email không hợp lệ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // 4. (Tạm thời) hiển thị thông báo đăng ký thành công
-            MessageBox.Show("Đăng ký thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             using (SqlConnection conn = Database.GetConnection())
             {

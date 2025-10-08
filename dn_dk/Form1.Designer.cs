@@ -54,9 +54,9 @@
             this.lbl1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl1.Location = new System.Drawing.Point(29, 101);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(62, 17);
+            this.lbl1.Size = new System.Drawing.Size(54, 17);
             this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "Họ  tên :";
+            this.lbl1.Text = "Họ  tên";
             this.lbl1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl3
@@ -64,9 +64,9 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Location = new System.Drawing.Point(29, 201);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(55, 17);
+            this.lbl3.Size = new System.Drawing.Size(47, 17);
             this.lbl3.TabIndex = 1;
-            this.lbl3.Text = "E-mail :";
+            this.lbl3.Text = "E-mail";
             // 
             // label3
             // 
@@ -81,9 +81,9 @@
             this.lab5.AutoSize = true;
             this.lab5.Location = new System.Drawing.Point(29, 301);
             this.lab5.Name = "lab5";
-            this.lab5.Size = new System.Drawing.Size(74, 17);
+            this.lab5.Size = new System.Drawing.Size(66, 17);
             this.lab5.TabIndex = 3;
-            this.lab5.Text = "Mật khẩu :";
+            this.lab5.Text = "Mật khẩu";
             this.lab5.Click += new System.EventHandler(this.label4_Click);
             // 
             // lab6
@@ -91,9 +91,9 @@
             this.lab6.AutoSize = true;
             this.lab6.Location = new System.Drawing.Point(29, 351);
             this.lab6.Name = "lab6";
-            this.lab6.Size = new System.Drawing.Size(130, 17);
+            this.lab6.Size = new System.Drawing.Size(122, 17);
             this.lab6.TabIndex = 4;
-            this.lab6.Text = "Nhập lại mật khẩu :";
+            this.lab6.Text = "Nhập lại mật khẩu";
             // 
             // label6
             // 
@@ -113,9 +113,9 @@
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.Location = new System.Drawing.Point(29, 151);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(99, 17);
+            this.lbl2.Size = new System.Drawing.Size(91, 17);
             this.lbl2.TabIndex = 7;
-            this.lbl2.Text = "Số điện thoại :";
+            this.lbl2.Text = "Số điện thoại";
             this.lbl2.Click += new System.EventHandler(this.label8_Click);
             // 
             // lab4
@@ -123,16 +123,16 @@
             this.lab4.AutoSize = true;
             this.lab4.Location = new System.Drawing.Point(29, 251);
             this.lab4.Name = "lab4";
-            this.lab4.Size = new System.Drawing.Size(83, 17);
+            this.lab4.Size = new System.Drawing.Size(163, 17);
             this.lab4.TabIndex = 8;
-            this.lab4.Text = "Ngày sinh : ";
+            this.lab4.Text = "Ngày sinh (dd/MM/yyyy) ";
             this.lab4.Click += new System.EventHandler(this.label9_Click);
             // 
             // textht
             // 
             this.textht.BackColor = System.Drawing.Color.White;
             this.textht.Location = new System.Drawing.Point(243, 101);
-            this.textht.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textht.Margin = new System.Windows.Forms.Padding(2);
             this.textht.Name = "textht";
             this.textht.Size = new System.Drawing.Size(344, 23);
             this.textht.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             this.texte.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.texte.Location = new System.Drawing.Point(243, 201);
-            this.texte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.texte.Margin = new System.Windows.Forms.Padding(2);
             this.texte.Name = "texte";
             this.texte.Size = new System.Drawing.Size(344, 23);
             this.texte.TabIndex = 10;
@@ -151,7 +151,7 @@
             // 
             this.textns.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textns.Location = new System.Drawing.Point(243, 251);
-            this.textns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textns.Margin = new System.Windows.Forms.Padding(2);
             this.textns.Name = "textns";
             this.textns.Size = new System.Drawing.Size(344, 23);
             this.textns.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             this.textmk.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textmk.Location = new System.Drawing.Point(243, 301);
-            this.textmk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textmk.Margin = new System.Windows.Forms.Padding(2);
             this.textmk.Name = "textmk";
             this.textmk.PasswordChar = '*';
             this.textmk.Size = new System.Drawing.Size(344, 23);
@@ -171,7 +171,7 @@
             // 
             this.textsdt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textsdt.Location = new System.Drawing.Point(243, 151);
-            this.textsdt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textsdt.Margin = new System.Windows.Forms.Padding(2);
             this.textsdt.Name = "textsdt";
             this.textsdt.Size = new System.Drawing.Size(344, 23);
             this.textsdt.TabIndex = 14;
@@ -181,7 +181,7 @@
             // 
             this.textnlmk.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.textnlmk.Location = new System.Drawing.Point(243, 351);
-            this.textnlmk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textnlmk.Margin = new System.Windows.Forms.Padding(2);
             this.textnlmk.Name = "textnlmk";
             this.textnlmk.PasswordChar = '*';
             this.textnlmk.Size = new System.Drawing.Size(344, 23);
@@ -191,8 +191,8 @@
             // 
             this.btndk.BackColor = System.Drawing.Color.LightPink;
             this.btndk.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btndk.Location = new System.Drawing.Point(347, 402);
-            this.btndk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btndk.Location = new System.Drawing.Point(347, 388);
+            this.btndk.Margin = new System.Windows.Forms.Padding(2);
             this.btndk.Name = "btndk";
             this.btndk.Size = new System.Drawing.Size(164, 40);
             this.btndk.TabIndex = 16;
@@ -207,7 +207,7 @@
             this.btndn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btndn.Location = new System.Drawing.Point(347, 463);
-            this.btndn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btndn.Margin = new System.Windows.Forms.Padding(2);
             this.btndn.Name = "btndn";
             this.btndn.Size = new System.Drawing.Size(164, 40);
             this.btndn.TabIndex = 17;

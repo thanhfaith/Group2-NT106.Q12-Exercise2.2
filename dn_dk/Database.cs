@@ -9,11 +9,11 @@ namespace signin_signup
 {
     internal class Database
     {
-        private static string connectionString = "Server=YENVY;Database=UserDATABASE;Integrated Security=True;";
+        private static string connectionString = "Server=YENVY;Database=QuanLyNguoiDung;Integrated Security=True;";
 
         public static SqlConnection GetConnection()
-            {
-                return new SqlConnection(connectionString);
-            }
+        {
+            return new SqlConnection(connectionString);
         }
+    }
 }
