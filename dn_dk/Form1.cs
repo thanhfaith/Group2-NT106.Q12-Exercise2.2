@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -86,6 +87,22 @@ namespace signin_signup
 
         }
 
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes(password);
+                byte[] hash = sha256.ComputeHash(bytes);
+
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    builder.Append(hash[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
         private void btndk_Click(object sender, EventArgs e)
         {
             string hoTen = textht.Text.Trim();
@@ -134,7 +151,9 @@ namespace signin_signup
                     cmd.Parameters.AddWithValue("@SDT", textsdt.Text);
                     cmd.Parameters.AddWithValue("@Email", texte.Text);
                     cmd.Parameters.AddWithValue("@NgaySinh", textns.Text);
-                    cmd.Parameters.AddWithValue("@MatKhau", textmk.Text);
+                    string hashedPassword = HashPassword(matKhau);
+
+                    cmd.Parameters.AddWithValue("@MatKhau", hashedPassword);
 
                     int result = cmd.ExecuteNonQuery();
 

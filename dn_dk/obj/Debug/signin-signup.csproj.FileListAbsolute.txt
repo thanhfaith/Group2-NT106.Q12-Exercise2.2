@@ -37,3 +37,15 @@ D:\New folder\dn_dk\obj\Debug\signin-signup.pdb
 D:\New folder\dn_dk\bin\Debug\signin-signup.exe.config
 D:\New folder\dn_dk\bin\Debug\signin-signup.exe
 D:\New folder\dn_dk\bin\Debug\signin-signup.pdb
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.exe.config
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.exe
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.AssemblyReference.cache
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.formdangky.resources
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Formdangnhap.resources
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Formthongtin.resources
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin_signup.Properties.Resources.resources
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.GenerateResource.cache
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.csproj.CoreCompileInputs.cache
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.exe
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\obj\Debug\signin-signup.pdb
+D:\Lập trình mạng căn bản\LT\BT\BT tuần 3\Group2-NT106.Q12-Exercise2.2\dn_dk\bin\Debug\signin-signup.pdb

@@ -172,7 +172,7 @@
             // lble
             // 
             this.lble.AutoSize = true;
-            this.lble.Location = new System.Drawing.Point(29, 101);
+            this.lble.Location = new System.Drawing.Point(29, 104);
             this.lble.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lble.Name = "lble";
             this.lble.Size = new System.Drawing.Size(55, 17);
@@ -200,7 +200,7 @@
             // lblmk
             // 
             this.lblmk.AutoSize = true;
-            this.lblmk.Location = new System.Drawing.Point(29, 151);
+            this.lblmk.Location = new System.Drawing.Point(29, 142);
             this.lblmk.Name = "lblmk";
             this.lblmk.Size = new System.Drawing.Size(74, 17);
             this.lblmk.TabIndex = 33;
@@ -208,45 +208,46 @@
             // 
             // btndn
             // 
-            this.btndn.BackColor = System.Drawing.Color.Blue;
-            this.btndn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btndn.Location = new System.Drawing.Point(359, 186);
+            this.btndn.BackColor = System.Drawing.Color.LightPink;
+            this.btndn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btndn.Location = new System.Drawing.Point(357, 185);
             this.btndn.Margin = new System.Windows.Forms.Padding(2);
             this.btndn.Name = "btndn";
-            this.btndn.Size = new System.Drawing.Size(147, 49);
+            this.btndn.Size = new System.Drawing.Size(135, 40);
             this.btndn.TabIndex = 34;
-            this.btndn.Text = "đăng nhập";
+            this.btndn.Text = "Đăng nhập";
             this.btndn.UseVisualStyleBackColor = false;
             this.btndn.Click += new System.EventHandler(this.btndn_Click);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 242);
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(29, 244);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 17);
+            this.label13.Size = new System.Drawing.Size(122, 17);
             this.label13.TabIndex = 36;
-            this.label13.Text = "chưa có tài khoản";
+            this.label13.Text = "Chưa có tài khoản";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // btndk
             // 
-            this.btndk.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btndk.BackColor = System.Drawing.Color.LightPink;
             this.btndk.FlatAppearance.BorderSize = 0;
-            this.btndk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndk.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndk.ForeColor = System.Drawing.Color.Blue;
-            this.btndk.Location = new System.Drawing.Point(205, 235);
+            this.btndk.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btndk.Location = new System.Drawing.Point(357, 244);
             this.btndk.Margin = new System.Windows.Forms.Padding(2);
             this.btndk.Name = "btndk";
-            this.btndk.Size = new System.Drawing.Size(132, 41);
+            this.btndk.Size = new System.Drawing.Size(135, 36);
             this.btndk.TabIndex = 35;
-            this.btndk.Text = "[đăng ký]";
+            this.btndk.Text = "[Đăng ký]";
             this.btndk.UseVisualStyleBackColor = false;
             this.btndk.Click += new System.EventHandler(this.button4_Click);
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(16, 9);
             this.label3.Name = "label3";
@@ -257,24 +258,24 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Blue;
-            this.button5.Location = new System.Drawing.Point(-16, 179);
+            this.button5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.button5.Location = new System.Drawing.Point(16, 186);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(243, 49);
+            this.button5.Size = new System.Drawing.Size(138, 40);
             this.button5.TabIndex = 38;
-            this.button5.Text = "quên mật khẩu?";
+            this.button5.Text = "Quên mật khẩu?";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // Formdangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(640, 291);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label3);
