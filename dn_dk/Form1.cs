@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,7 +110,7 @@ namespace signin_signup
             string hoTen = textht.Text.Trim();
             string sdt = textsdt.Text.Trim();
             string email = texte.Text.Trim();
-            string ngaySinh = textns.Text.Trim();
+            string ngaySinhText = textns.Text.Trim();
             string matKhau = textmk.Text;
             string nhapLai = textnlmk.Text;
 
@@ -133,6 +135,19 @@ namespace signin_signup
                 return;
             }
 
+            DateTime ngaySinh;
+            try
+            {
+                ngaySinh = DateTime.ParseExact(ngaySinhText, "dd/MM/yyyy", null);
+            }
+            catch
+            {
+                MessageBox.Show("Ngày sinh không hợp lệ! (định dạng: dd/MM/yyyy)", "Thông báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string hashedPassword = HashPassword(matKhau);
 
             using (SqlConnection conn = Database.GetConnection())
             {
@@ -140,50 +155,33 @@ namespace signin_signup
                 {
                     conn.Open();
 
-                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
-                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
-                    {
-                        checkCmd.Parameters.AddWithValue("@Email", email);
-                        int existingCount = (int)checkCmd.ExecuteScalar();
-
-                        if (existingCount > 0)
-                        {
-                            MessageBox.Show("Email này đã được đăng ký. Vui lòng dùng email khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
-
-                    string hashedPassword = HashPassword(matKhau);
-
                     string query = "INSERT INTO Users (HoTen, SoDienThoai, Email, NgaySinh, MatKhau) " +
-                                   "VALUES (@HoTen, @SDT, @Email, @NgaySinh, @MatKhau)";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@HoTen", textht.Text);
-                    cmd.Parameters.AddWithValue("@SDT", textsdt.Text);
-                    cmd.Parameters.AddWithValue("@Email", texte.Text);
-                    cmd.Parameters.AddWithValue("@NgaySinh", textns.Text);
-                    cmd.Parameters.AddWithValue("@MatKhau", hashedPassword);
-                    int result = cmd.ExecuteNonQuery();
+                      "VALUES (@HoTen, @SDT, @Email, @NgaySinh, @MatKhau)";
 
-                    if (result > 0)
+                    using (SqlCommand Cmd = new SqlCommand(query, conn))
                     {
-                        MessageBox.Show("Đăng ký thành công!");
-                        Formdangnhap f2 = new Formdangnhap();
-                        f2.Show();
-                        this.Hide();
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@HoTen", textht.Text);
+                        cmd.Parameters.AddWithValue("@SDT", textsdt.Text);
+                        cmd.Parameters.AddWithValue("@Email", texte.Text);
+                        cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
+                        cmd.Parameters.AddWithValue("@MatKhau", hashedPassword);
+                        cmd.ExecuteNonQuery();
+
                     }
-                    else
-                    {
-                        MessageBox.Show("Đăng ký thất bại!");
-                    }
+
+                    MessageBox.Show("Đăng ký thành công!", "Thông báo",
+                           MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi: " + ex.Message);
+                    MessageBox.Show("Lỗi: " + ex.Message, "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
+            
         private void textns_TextChanged(object sender, EventArgs e)
         {
 
