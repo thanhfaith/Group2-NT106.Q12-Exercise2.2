@@ -140,6 +140,21 @@ namespace signin_signup
                 {
                     conn.Open();
 
+                    string checkQuery = "SELECT COUNT(*) FROM Users WHERE Email = @Email";
+                    using (SqlCommand checkCmd = new SqlCommand(checkQuery, conn))
+                    {
+                        checkCmd.Parameters.AddWithValue("@Email", email);
+                        int existingCount = (int)checkCmd.ExecuteScalar();
+
+                        if (existingCount > 0)
+                        {
+                            MessageBox.Show("Email này đã được đăng ký. Vui lòng dùng email khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+                    string hashedPassword = HashPassword(matKhau);
+
                     string query = "INSERT INTO Users (HoTen, SoDienThoai, Email, NgaySinh, MatKhau) " +
                                    "VALUES (@HoTen, @SDT, @Email, @NgaySinh, @MatKhau)";
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -147,10 +162,7 @@ namespace signin_signup
                     cmd.Parameters.AddWithValue("@SDT", textsdt.Text);
                     cmd.Parameters.AddWithValue("@Email", texte.Text);
                     cmd.Parameters.AddWithValue("@NgaySinh", textns.Text);
-                    string hashedPassword = HashPassword(matKhau);
-
                     cmd.Parameters.AddWithValue("@MatKhau", hashedPassword);
-
                     int result = cmd.ExecuteNonQuery();
 
                     if (result > 0)
@@ -170,6 +182,11 @@ namespace signin_signup
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
+        }
+
+        private void textns_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

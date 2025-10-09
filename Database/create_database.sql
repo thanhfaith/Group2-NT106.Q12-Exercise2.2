@@ -1,4 +1,3 @@
-
 USE QuanlyNguoiDung;
 GO
 
@@ -15,5 +14,3 @@ BEGIN
     );
 END
 GO
-
-SELECT * FROM Users;

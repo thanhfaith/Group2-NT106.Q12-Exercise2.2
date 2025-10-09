@@ -155,6 +155,7 @@
             this.textns.Name = "textns";
             this.textns.Size = new System.Drawing.Size(344, 23);
             this.textns.TabIndex = 12;
+            this.textns.TextChanged += new System.EventHandler(this.textns_TextChanged);
             // 
             // textmk
             // 
